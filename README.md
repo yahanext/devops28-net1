@@ -95,6 +95,7 @@ X-Firefox-Spdy: h2
  TLS
  ```
     приложите скриншот консоли браузера в ответ.
+![Скрин браузера](https://github.com/yahanext/devops28-net1/blob/main/scr.png)
 
 Шаг 3. Какой IP-адрес у вас в интернете?
 95.78.186.142
