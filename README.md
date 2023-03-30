@@ -38,6 +38,25 @@ HOST: stackoverflow.com
 [press enter]
 
 В ответе укажите полученный HTTP-код и поясните, что он означает.
+```
+Ответ от сервера
+HTTP/1.1 403 Forbidden
+Connection: close
+Content-Length: 1920
+Server: Varnish
+Retry-After: 0
+Content-Type: text/html
+Accept-Ranges: bytes
+Date: Thu, 30 Mar 2023 08:33:03 GMT
+Via: 1.1 varnish
+X-Served-By: cache-hel1410022-HEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1680165183.213728,VS0,VE1
+X-DNS-Prefetch-Control: off
+
+код 403 - доступ к запрошенному ресурсу запрещен 
+и далее html код страницы в котором описано что ваш ip адресс заблокирован для досупа к данному сервису и обращаться по такому то емейлу.
 
 Шаг 2. Повторите задание 1 в браузере, используя консоль разработчика F12:
 
@@ -45,7 +64,36 @@ HOST: stackoverflow.com
     отправьте запрос http://stackoverflow.com;
     найдите первый ответ HTTP-сервера, откройте вкладку Headers;
     укажите в ответе полученный HTTP-код;
+```
+HTTP/2 200 OK
+cache-control: private
+content-type: text/html; charset=utf-8
+content-encoding: gzip
+strict-transport-security: max-age=15552000
+x-frame-options: SAMEORIGIN
+set-cookie: OptanonConsent=; expires=Tue, 28 Mar 2023 08:54:28 GMT; domain=.stackoverflow.com; path=/; secure; samesite=none; httponly
+set-cookie: OptanonAlertBoxClosed=; expires=Tue, 28 Mar 2023 08:54:28 GMT; domain=.stackoverflow.com; path=/; secure; samesite=none; httponly
+set-cookie: prov_tgt=; expires=Tue, 28 Mar 2023 08:54:28 GMT; domain=.stackoverflow.com; path=/; secure; samesite=none; httponly
+x-request-guid: 7f050fb5-907b-48c0-990c-fa0d1c411113
+feature-policy: microphone 'none'; speaker 'none'
+content-security-policy: upgrade-insecure-requests; frame-ancestors 'self' https://stackexchange.com
+accept-ranges: bytes
+date: Thu, 30 Mar 2023 08:54:28 GMT
+via: 1.1 varnish
+x-served-by: cache-hel1410024-HEL
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1680166469.627911,VS0,VE115
+vary: Accept-Encoding,Fastly-SSL
+x-dns-prefetch-control: off
+X-Firefox-Spdy: h2
+```
+
+
     проверьте время загрузки страницы и определите, какой запрос обрабатывался дольше всего;
+ ```
+ TLS
+ ```
     приложите скриншот консоли браузера в ответ.
 
 Шаг 3. Какой IP-адрес у вас в интернете?
